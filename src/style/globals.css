@@ -20,3 +20,14 @@
   --font-sans: "Antonio", sans-serif;
   --font-paragraph: "ProximaNova, sans-serif";
 }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #523122;
+  background-color: #faeade;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
