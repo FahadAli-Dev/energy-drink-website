@@ -1,7 +1,7 @@
 const page = () => {
   return (
     <div>
-      <p>Hello World!</p>
+      <p className="font-proxima">Hello World!</p>
     </div>
   );
 };
