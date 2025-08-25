@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="p-[0.5rem] sm:p-[0.5rem_1rem] md:p-[2rem] flex justify-between items-center">
+    <nav className="z-50 p-[0.5rem] sm:p-[0.5rem_1rem] md:p-[2rem] flex justify-between items-center absolute top-0 w-[100%]">
       <Image
         src="/images/nav-logo.svg"
         alt="logo"
