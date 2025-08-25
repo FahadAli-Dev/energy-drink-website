@@ -31,3 +31,15 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+.btn {
+  @apply uppercase bg-[#fef3f0] text-[15px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-in duration-[0.2s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none;
+}
+
+.title {
+  @apply text-[119px] font-extrabold leading-[138px] uppercase;
+}
+
+.des {
+  @apply text-[1rem] font-proxima w-[49%] leading-[1.2rem];
+}

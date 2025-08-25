@@ -1,8 +1,12 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/sections/Hero";
+
 const page = () => {
   return (
-    <div>
-      <p className="font-proxima">Hello World!</p>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 };
 
