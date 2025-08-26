@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="border-[1.5px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
       </div>
 
-      <button className="uppercase bg-[#fef3f0] text-[15px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-in duration-[0.2s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
+      <button className="uppercase bg-[#fef3f0] text-[15.36px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-in duration-[0.2s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
         Find in Stores
       </button>
     </nav>
