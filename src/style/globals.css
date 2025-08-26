@@ -37,7 +37,7 @@ body {
 }
 
 .title {
-  @apply tracking-tighter text-[119px] font-extrabold leading-[138px] uppercase;
+  @apply tracking-tighter text-[122px] font-extrabold leading-[138px] uppercase;
 }
 
 .des {

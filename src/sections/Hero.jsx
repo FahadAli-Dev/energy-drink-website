@@ -9,8 +9,7 @@ const Hero = () => {
   gsap.registerPlugin(SplitText);
 
   const tl = gsap.timeline({
-    delay: 0.9,
-    stagger: 0.01,
+    delay: 0.7,
   });
 
   const ftRef = useRef();
@@ -50,15 +49,14 @@ const Hero = () => {
     <div className="w-[100%] h-screen relative">
       <video
         src="/videos/hero-bg.mp4"
-        // loop
         autoPlay
         muted
         controls=""
         className="w-[100%] h-[100%] object-cover"
       ></video>
-      <div className="hero-content lg:max-w-[900px] mx-auto flex flex-col items-center justify-center absolute top-[16%] left-[23.8%]">
+      <div className="hero-content w-[53%] mx-auto flex flex-col items-center justify-center absolute top-[16%] left-[23.4%]">
         <div>
-          <h1 className="title tracking-normal" ref={ftRef}>
+          <h1 className="title" ref={ftRef}>
             Freaking Delicious
           </h1>
         </div>
