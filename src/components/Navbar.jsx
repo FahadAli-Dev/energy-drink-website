@@ -7,8 +7,10 @@ const Navbar = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    gsap.utils.toArray(".magnetic").forEach((el) => {
-      el.onmousemove = (e) => {
+    const elements = gsap.utils.toArray(".magnetic");
+
+    elements.forEach((el) => {
+      const handleMove = (e) => {
         const r = el.getBoundingClientRect();
         gsap.to(el, {
           x: (e.clientX - (r.left + r.width / 2)) / 1.6,
@@ -18,8 +20,17 @@ const Navbar = () => {
           opacity: 0.8,
         });
       };
-      el.onmouseleave = () =>
+
+      const handleLeave = () =>
         gsap.to(el, { x: 0, y: 0, duration: 0.5, scale: 1, opacity: 1 });
+
+      el.addEventListener("mousemove", handleMove);
+      el.addEventListener("mouseleave", handleLeave);
+
+      return () => {
+        el.removeEventListener("mousemove", handleMove);
+        el.removeEventListener("mouseleave", handleLeave);
+      };
     });
   }, []);
 
@@ -40,7 +51,7 @@ const Navbar = () => {
         <div className="border-[1.5px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
       </div>
 
-      <button className="uppercase bg-[#fef3f0] text-[15.36px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-in duration-[0.2s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
+      <button className="uppercase bg-[#fef3f0] text-[15.36px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
         Find in Stores
       </button>
     </nav>
