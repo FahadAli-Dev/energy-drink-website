@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  gsap.registerPlugin(CustomEase);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -36,6 +39,34 @@ const Navbar = () => {
     });
   }, []);
 
+  const toggleMenu = () => {
+    const tl = gsap.timeline();
+    setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      tl.to(".menu", {
+        // translateY: "0",
+        height: "100%",
+        duration: 2,
+        ease: "expo.inOut",
+      }).from(
+        ".items",
+        {
+          opacity: 0.5,
+          duration: 0.4,
+          ease: "slow",
+        },
+        "-=0.8"
+      );
+    } else {
+      gsap.to(".menu", {
+        // translateY: "-100%",
+        height: "0",
+        duration: 2,
+        ease: "expo.inOut",
+      });
+    }
+  };
+
   return (
     <div>
       <nav className="z-50 p-[0.5rem] sm:p-[0.5rem_1rem] md:p-[2rem] flex justify-between items-center absolute top-0 w-[100%]">
@@ -50,7 +81,7 @@ const Navbar = () => {
           />
         </div>
         <div
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={toggleMenu}
           className="magnetic flex flex-col gap-[0.5rem] h-[50] justify-center cursor-pointer"
         >
           <div className="border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
@@ -61,24 +92,20 @@ const Navbar = () => {
           Find in Stores
         </button>
       </nav>
-      <div
-        className={`menu h-screen w-full flex justify-center items-center absolute z-10 bg-[var(--color-milk)] transition-all ease-in-out duration-[0.2s] ${
-          menuOpen ? "translate-y-[0]" : "translate-y-[-100%]"
-        }`}
-      >
-        <div className="menu-left flex-1 h-[100%] flex flex-col items-center justify-end gap-9.5 mb-[3.5rem]">
+      <div className="menu w-full flex justify-center items-center absolute z-10 bg-[var(--color-milk)]">
+        <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end gap-9.5 mb-[3.5rem]">
           <div className="menu-items flex flex-col items-center text-[90px] font-[700] uppercase leading-[5.7rem] tracking-tighter">
-            <span>Shop</span>
-            <span>Find in stores</span>
-            <span>About us</span>
-            <span>tasty talks</span>
-            <span>Programs</span>
-            <span>Contacts</span>
+            <span className="items">Shop</span>
+            <span className="items">Find in stores</span>
+            <span className="items">About us</span>
+            <span className="items">tasty talks</span>
+            <span className="items">Programs</span>
+            <span className="items">Contacts</span>
           </div>
           <div className="social-links flex gap-[2rem] font-proxima text-[17px]">
-            <span>YouTube</span>
-            <span>Instagram</span>
-            <span>TikTok</span>
+            <span className="items">YouTube</span>
+            <span className="items">Instagram</span>
+            <span className="items">TikTok</span>
           </div>
         </div>
         <div className="menu-right relative flex-1 h-[100%]">

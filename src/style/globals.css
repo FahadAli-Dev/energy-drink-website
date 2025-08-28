@@ -43,3 +43,7 @@ body {
 .des {
   @apply text-[1rem] font-proxima leading-[1.2rem];
 }
+
+.items {
+  @apply opacity-[1];
+}
