@@ -27,7 +27,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: #523122;
-  background-color: #faeade;
+  background-color: var(--color-milk);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
