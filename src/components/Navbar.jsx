@@ -44,26 +44,32 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
     if (menuOpen) {
       tl.to(".menu", {
-        // translateY: "0",
-        height: "100%",
-        duration: 2,
-        ease: "expo.inOut",
-      }).from(
-        ".items",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1.5,
+        ease: CustomEase.create("cusEase", "M0,0,C1,0 0.439,0.766,1,1"),
+      }).to(
+        ".m-item",
         {
-          opacity: 0.5,
-          duration: 0.4,
+          opacity: 1,
+          duration: 1.5,
           ease: "slow",
         },
         "-=0.8"
       );
     } else {
-      gsap.to(".menu", {
-        // translateY: "-100%",
-        height: "0",
-        duration: 2,
+      tl.to(".menu", {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        duration: 1.5,
         ease: "expo.inOut",
-      });
+      }).to(
+        ".m-item",
+        {
+          opacity: 0,
+          duration: 1.5,
+          ease: "slow",
+        },
+        "<"
+      );
     }
   };
 
@@ -82,7 +88,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMenu}
-          className="magnetic flex flex-col gap-[0.5rem] h-[50] justify-center cursor-pointer"
+          className="magnetic flex flex-col gap-[0.5rem] h-[50] justify-center cursor-pointer p-[0rem_0rem_0.5rem_3.1rem]"
         >
           <div className="border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
           <div className="border-[1.5px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
@@ -92,20 +98,23 @@ const Navbar = () => {
           Find in Stores
         </button>
       </nav>
-      <div className="menu w-full flex justify-center items-center absolute z-10 bg-[var(--color-milk)]">
+      <div
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+        className="menu w-full h-screen flex justify-center items-center absolute z-10 bg-[var(--color-milk)]"
+      >
         <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end gap-9.5 mb-[3.5rem]">
-          <div className="menu-items flex flex-col items-center text-[90px] font-[700] uppercase leading-[5.7rem] tracking-tighter">
-            <span className="items">Shop</span>
-            <span className="items">Find in stores</span>
-            <span className="items">About us</span>
-            <span className="items">tasty talks</span>
-            <span className="items">Programs</span>
-            <span className="items">Contacts</span>
+          <div className="menu-items flex flex-col items-center leading-[5.7rem] text-[90px] font-[700] uppercase  tracking-tighter">
+            <span className="m-item">Shop</span>
+            <span className="m-item">Find in stores</span>
+            <span className="m-item">About us</span>
+            <span className="m-item">tasty talks</span>
+            <span className="m-item">Programs</span>
+            <span className="m-item">Contacts</span>
           </div>
           <div className="social-links flex gap-[2rem] font-proxima text-[17px]">
-            <span className="items">YouTube</span>
-            <span className="items">Instagram</span>
-            <span className="items">TikTok</span>
+            <span className="m-item">YouTube</span>
+            <span className="m-item">Instagram</span>
+            <span className="m-item">TikTok</span>
           </div>
         </div>
         <div className="menu-right relative flex-1 h-[100%]">
