@@ -4,9 +4,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
+import { menuData } from "@/utils/data";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
+  const [active, setActive] = useState("/images/menu-img7.png");
+  const [rotate, setRotate] = useState(false);
+  const [hovered, setHovered] = useState(null);
   gsap.registerPlugin(CustomEase);
 
   useEffect(() => {
@@ -40,43 +44,147 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
+    setRotate(!rotate);
     const tl = gsap.timeline();
-    setMenuOpen(!menuOpen);
     if (menuOpen) {
       tl.to(".menu", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1.5,
         ease: CustomEase.create("cusEase", "M0,0,C1,0 0.439,0.766,1,1"),
-      }).to(
-        ".m-item",
-        {
-          opacity: 1,
-          duration: 1.5,
-          ease: "slow",
-        },
-        "-=0.8"
-      );
+      })
+        .to(
+          ".dash",
+          {
+            width: "25px",
+            duration: 0.1,
+          },
+          "<"
+        )
+        .to(
+          ".menu-bars",
+          {
+            backgroundColor: "#fef3f0",
+            borderRadius: "999px",
+            duration: 0.1,
+            ease: "power1.in",
+          },
+          "<"
+        )
+        .to(
+          ".menu-bars",
+          {
+            gap: "0rem",
+            duration: 0.1,
+            delay: "0.2",
+          },
+          "<"
+        )
+        .to(
+          ".dash-1",
+          {
+            rotate: "45deg",
+            y: "2px",
+            duration: 0.2,
+            ease: "power1.in",
+            delay: 0.2,
+          },
+          "<"
+        )
+        .to(
+          ".dash-2",
+          {
+            rotate: "-45deg",
+            duration: 0.2,
+            ease: "power1.in",
+          },
+          "<"
+        )
+        .to(
+          ".m-item",
+          {
+            opacity: 1,
+            duration: 1.5,
+            ease: "slow",
+          },
+          "-=0.8"
+        );
     } else {
       tl.to(".menu", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         duration: 1.5,
         ease: "expo.inOut",
-      }).to(
-        ".m-item",
-        {
-          opacity: 0,
-          duration: 1.5,
-          ease: "slow",
-        },
-        "<"
-      );
+      })
+        .to(
+          ".m-item",
+          {
+            opacity: 0,
+            duration: 1.5,
+            ease: "slow",
+          },
+          "<"
+        )
+        .to(
+          ".dash-1",
+          {
+            rotate: "0deg",
+            y: "0px",
+            duration: 0.2,
+            ease: "power1.in",
+          },
+          "<"
+        )
+        .to(
+          ".dash-2",
+          {
+            rotate: "0deg",
+            duration: 0.2,
+            ease: "power1.in",
+          },
+          "<"
+        )
+
+        .to(
+          ".menu-bars",
+          {
+            gap: "0.5rem",
+            backgroundColor: "",
+            borderRadius: "0px",
+            duration: 0.3,
+            delay: 0.2,
+            ease: "power1.in",
+          },
+          "<"
+        )
+        .to(
+          ".dash",
+          {
+            width: "46px",
+            duration: 0.3,
+            delay: 0.2,
+            ease: "power1.in",
+          },
+          "<"
+        );
     }
+
+    setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".menu-img",
+      { opacity: 0, scale: 1.1 },
+      { opacity: 1, scale: 1, duration: 0.5, ease: "power4.out" }
+    );
+  }, [active]);
 
   return (
     <div>
       <nav className="z-50 p-[0.5rem] sm:p-[0.5rem_1rem] md:p-[2rem] flex justify-between items-center absolute top-0 w-[100%]">
-        <div className="relative w-[92px] h-[46px]">
+        <div
+          onClick={() => window.location.reload()}
+          className="relative w-[92px] h-[46px]"
+        >
           <Image
             src="/images/nav-logo.svg"
             alt="logo"
@@ -88,10 +196,10 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMenu}
-          className="magnetic flex flex-col gap-[0.5rem] h-[50] justify-center cursor-pointer p-[0rem_0rem_0.5rem_3.1rem]"
+          className="menu-bars magnetic flex flex-col gap-[0.5rem] h-[50] w-[50] justify-center items-center cursor-pointer m-[0rem_0rem_0.5rem_3.1rem] relative"
         >
-          <div className="border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
-          <div className="border-[1.5px] border-solid border-[var(--color-dark-brown)] w-[46px]"></div>
+          <div className="dash dash-1 w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
+          <div className="dash dash-2 w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
         </div>
 
         <button className="uppercase bg-[#fef3f0] text-[15.36px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
@@ -103,13 +211,31 @@ const Navbar = () => {
         className="menu w-full h-screen flex justify-center items-center absolute z-10 bg-[var(--color-milk)]"
       >
         <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end gap-9.5 mb-[3.5rem]">
-          <div className="menu-items flex flex-col items-center leading-[5.7rem] text-[90px] font-[700] uppercase  tracking-tighter">
-            <span className="m-item">Shop</span>
-            <span className="m-item">Find in stores</span>
-            <span className="m-item">About us</span>
-            <span className="m-item">tasty talks</span>
-            <span className="m-item">Programs</span>
-            <span className="m-item">Contacts</span>
+          <div className=" menu-items flex flex-col items-center leading-[5.7rem] text-[90px] font-[700] uppercase  tracking-tighter">
+            {menuData.map((item, idx) => {
+              return (
+                <span
+                  key={idx}
+                  onMouseEnter={() => {
+                    setActive(item.src);
+                    setHovered(idx);
+                  }}
+                  onMouseLeave={() => {
+                    setActive("/images/menu-img7.png");
+                    setHovered(null);
+                  }}
+                  className="m-item relative"
+                >
+                  <span
+                    className={`transition-all ease-in duration-[0.3s] ${
+                      hovered !== null && hovered !== idx ? "opacity-[.3]" : ""
+                    }`}
+                  >
+                    {item.title}
+                  </span>
+                </span>
+              );
+            })}
           </div>
           <div className="social-links flex gap-[2rem] font-proxima text-[17px]">
             <span className="m-item">YouTube</span>
@@ -117,12 +243,12 @@ const Navbar = () => {
             <span className="m-item">TikTok</span>
           </div>
         </div>
-        <div className="menu-right relative flex-1 h-[100%]">
+        <div className="menu-right relative flex-1 h-[100%] overflow-hidden">
           <Image
-            src="/images/menu-img1.png"
+            src={active}
             alt="img"
             fill
-            className="object-cover"
+            className="menu-img object-cover"
           />
         </div>
       </div>
