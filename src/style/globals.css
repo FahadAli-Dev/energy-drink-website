@@ -32,6 +32,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Global classes */
 .btn {
   @apply w-[192px] h-[56px] flex justify-center items-center uppercase bg-[var(--color-light-brown)] text-[1rem] font-[800] rounded-[999px] cursor-pointer;
 }
