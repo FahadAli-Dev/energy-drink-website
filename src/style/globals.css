@@ -37,9 +37,12 @@ body {
 }
 
 .title {
-  @apply tracking-tighter text-[122px] font-extrabold leading-[138px] uppercase;
+  @apply tracking-tighter sm:text-[95px] md:text-[58px] lg:text-[96px] xl:text-[104px] 2xl:text-[122px] sm:h-[108px] md:h-[69px] lg:h-[90px] xl:h-[110px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
 }
 
+.title > div {
+  @apply flex justify-center items-center sm:h-[108px] md:h-[69px] lg:h-[90px] xl:h-[110px] 2xl:h-auto;
+}
 .des {
   @apply text-[1rem] font-proxima leading-[1.2rem];
 }

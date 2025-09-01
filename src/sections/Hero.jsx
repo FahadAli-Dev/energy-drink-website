@@ -17,6 +17,9 @@ const Hero = () => {
 
   useGSAP(() => {
     const split = SplitText.create(ftRef.current, { type: "chars" });
+    split.chars.forEach((e) => {
+      e.style.display = "flex";
+    });
 
     tl.from(".hero-content", {
       y: 50,
@@ -52,11 +55,11 @@ const Hero = () => {
         autoPlay
         muted
         controls=""
-        className="w-[100%] h-[100%] object-cover"
+        className="w-[100%] h-[100%] object-cover hidden md:block"
       ></video>
-      <div className="hero-content w-[53%] mx-auto flex flex-col items-center justify-center absolute top-[16%] left-[23.4%]">
-        <div>
-          <h1 className="title" ref={ftRef}>
+      <div className="hero-content w-[100%] lg:w-[62%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[22%] xl:top-[20%] 2xl:top-[16%] md:left-[23.4%]">
+        <div className="h-[auto]">
+          <h1 className="title flex justify-center items-center" ref={ftRef}>
             Freaking Delicious
           </h1>
         </div>
@@ -65,9 +68,9 @@ const Hero = () => {
             clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
           }}
           ref={stRef}
-          className="bg-[var(--color-yellow-brown)] w-[97.5%]   backface-hidden border-[7.5px] mt-[-0.1rem] border-solid border-[#faeade]  rotate-357"
+          className="flex justify-center items-center py-[0.5rem] 2xl:py-[0rem] bg-[var(--color-yellow-brown)] 2xl:w-[97.5%] backface-hidden border-[7.5px] mt-[-0.1rem] border-solid border-[#faeade]  rotate-357"
         >
-          <h1 className="title text-[#fce1cd] pb-[0.8rem] w-[100%] text-center">
+          <h1 className="title flex justify-center items-center text-[#fce1cd] pb-[0.8rem] px-[1rem] 2xl:px-[0rem] w-[100%] text-center">
             Protein + Caffeine
           </h1>
         </div>
