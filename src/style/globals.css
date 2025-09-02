@@ -49,7 +49,7 @@ body {
 }
 
 .des {
-  @apply lg:text-[10.5px] xl:text-[13.5px] 2xl:text-[1rem] font-proxima xl:leading-[1.1rem] 2xl:leading-[1.2rem];
+  @apply sm:text-[1rem] md:text-[10.5px] xl:text-[13.5px] 2xl:text-[1rem] sm:leading-[1.2rem] md:leading-[0.8rem] xl:leading-[1.1rem] 2xl:leading-[1.2rem] font-proxima;
 }
 
 .m-item {

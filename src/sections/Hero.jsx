@@ -74,7 +74,7 @@ const Hero = () => {
             Protein + Caffeine
           </h1>
         </div>
-        <p className="des text-center m-[2.7rem_0rem_3.5rem_0rem]  w-[52%]">
+        <p className="des text-center m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[70%] md:w-[52%]">
           Live life to the fullest with SPYLT: Shatter boredom and embrace your
           inner kid with every deliciously smooth chug.
         </p>
