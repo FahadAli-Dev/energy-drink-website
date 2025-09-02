@@ -32,20 +32,24 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Global classes */
 .btn {
   @apply w-[192px] h-[56px] flex justify-center items-center uppercase bg-[var(--color-light-brown)] text-[1rem] font-[800] rounded-[999px] cursor-pointer;
 }
 
 .title {
-  @apply tracking-tighter sm:text-[95px] md:text-[58px] lg:text-[96px] xl:text-[104px] 2xl:text-[122px] sm:h-[108px] md:h-[69px] lg:h-[90px] xl:h-[110px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
+  @apply tracking-tight md:tracking-tighter text-[41px] sm:text-[83px] md:text-[70px] lg:text-[79px] xl:text-[104px] 2xl:text-[122px] h-[50px] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
 }
 
 .title > div {
-  @apply flex justify-center items-center sm:h-[108px] md:h-[69px] lg:h-[90px] xl:h-[110px] 2xl:h-auto;
+  @apply flex justify-center items-center h-[50px] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto;
 }
+
+.title > :nth-child(8) {
+  @apply mr-[0.5rem] sm:mr-[1rem] 2xl:mr-[1.2rem];
+}
+
 .des {
-  @apply text-[1rem] font-proxima leading-[1.2rem];
+  @apply lg:text-[10.5px] xl:text-[13.5px] 2xl:text-[1rem] font-proxima xl:leading-[1.1rem] 2xl:leading-[1.2rem];
 }
 
 .m-item {

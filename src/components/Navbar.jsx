@@ -180,10 +180,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="z-50 p-[0.5rem] sm:p-[0.5rem_1rem] md:p-[2rem] flex justify-between items-center absolute top-0 w-[100%]">
+      <nav className="z-50 p-[0.5rem] sm:p-[1rem_0.8rem] md:p-[1.4rem_1rem] lg:p-[0rem_1.5rem] xl:p-[1rem_1.5rem] 2xl:p-[1.5rem_2rem] flex justify-between items-center absolute top-0 w-[100%]">
         <div
           onClick={() => window.location.reload()}
-          className="relative w-[92px] h-[46px]"
+          className="relative sm:w-[80px] md:w-[100px] lg:w-[62px] xl:w-[76px] 2xl:w-[92px] sm:h-[48px] md:h-[56px] lg:h-[72px] xl:h-[38px] 2xl:h-[46px]"
         >
           <Image
             src="/images/nav-logo.svg"
@@ -196,13 +196,13 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMenu}
-          className="menu-bars magnetic flex flex-col gap-[0.5rem] h-[50] w-[50] justify-center items-center cursor-pointer m-[0rem_0rem_0.5rem_3.1rem] relative"
+          className="menu-bars magnetic hidden lg:flex flex-col gap-[0.5rem] h-[50] w-[50] justify-center items-center cursor-pointer m-[0rem_0rem_0.5rem_3.1rem] relative"
         >
-          <div className="dash dash-1 w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
-          <div className="dash dash-2 w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
+          <div className="dash dash-1 lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
+          <div className="dash dash-2 lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
         </div>
 
-        <button className="uppercase bg-[#fef3f0] text-[15.36px] font-[800] p-[0.8rem_1.9rem] rounded-[999px] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
+        <button className="sm:text-[1rem] lg:text-[11.36px] xl:text-[13.36px] 2xl:text-[15.36px] sm:p-[0.8rem_1rem] md:p-[1rem_1.5rem] lg:p-[10px_20px] xl:p-[10px_24.32px] 2xl:p-[0.8rem_1.9rem] font-[800] rounded-[999px] uppercase bg-[#fef3f0] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
           Find in Stores
         </button>
       </nav>
