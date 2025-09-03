@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-  @apply w-[192px] h-[56px] flex justify-center items-center uppercase bg-[var(--color-light-brown)] text-[1rem] font-[800] rounded-[999px] cursor-pointer;
+  @apply sm:text-[1rem] md:text-[11px] xl:text-[13.5px] 2xl:text-[1rem] sm:w-[165px] md:w-[128px] xl:w-[160px] 2xl:w-[192px] sm:h-[48px] md:h-[38px] xl:h-[47.5px] 2xl:h-[56px] font-[800] rounded-[999px] flex justify-center items-center uppercase bg-[var(--color-light-brown)] cursor-pointer;
 }
 
 .title {
@@ -54,4 +54,8 @@ body {
 
 .m-item {
   @apply cursor-pointer;
+}
+
+.dash-close {
+  @apply md:w-[29px] lg:w-[30px] xl:w-[38px] 2xl:w-[46px];
 }

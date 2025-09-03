@@ -46,6 +46,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setRotate(!rotate);
     const tl = gsap.timeline();
+    const w = window.innerWidth;
+
     if (menuOpen) {
       tl.to(".menu", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -162,6 +164,9 @@ const Navbar = () => {
             duration: 0.3,
             delay: 0.2,
             ease: "power1.in",
+            onComplete: () => {
+              gsap.set(".dash", { clearProps: "width" });
+            },
           },
           "<"
         );
@@ -180,10 +185,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="z-50 p-[0.5rem] sm:p-[1rem_0.8rem] md:p-[1.4rem_1rem] lg:p-[0rem_1.5rem] xl:p-[1rem_1.5rem] 2xl:p-[1.5rem_2rem] flex justify-between items-center absolute top-0 w-[100%]">
+      <nav className="z-50 p-[0.5rem] sm:p-[1rem_0.8rem] md:p-[0.4rem_1.2rem] lg:p-[0rem_1.5rem] xl:p-[1rem_1.5rem] 2xl:p-[1.5rem_2rem] flex justify-between items-center absolute top-0 w-[100%]">
         <div
           onClick={() => window.location.reload()}
-          className="relative sm:w-[80px] md:w-[100px] lg:w-[62px] xl:w-[76px] 2xl:w-[92px] sm:h-[48px] md:h-[56px] lg:h-[72px] xl:h-[38px] 2xl:h-[46px]"
+          className="relative sm:w-[80px] md:w-[59px] lg:w-[62px] xl:w-[76px] 2xl:w-[92px] sm:h-[48px] md:h-[29px] lg:h-[72px] xl:h-[38px] 2xl:h-[46px]"
         >
           <Image
             src="/images/nav-logo.svg"
@@ -196,22 +201,22 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMenu}
-          className="menu-bars magnetic hidden lg:flex flex-col gap-[0.5rem] h-[50] w-[50] justify-center items-center cursor-pointer m-[0rem_0rem_0.5rem_3.1rem] relative"
+          className="menu-bars magnetic hidden md:flex flex-col gap-[0.5rem] h-[50] w-[50] justify-center items-center cursor-pointer m-[0rem_0rem_0.5rem_3.1rem] relative"
         >
-          <div className="dash dash-1 lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
-          <div className="dash dash-2 lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
+          <div className="dash dash-1 md:w-[29px] lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
+          <div className="dash dash-2 md:w-[29px] lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
         </div>
 
-        <button className="sm:text-[1rem] lg:text-[11.36px] xl:text-[13.36px] 2xl:text-[15.36px] sm:p-[0.8rem_1rem] md:p-[1rem_1.5rem] lg:p-[10px_20px] xl:p-[10px_24.32px] 2xl:p-[0.8rem_1.9rem] font-[800] rounded-[999px] uppercase bg-[#fef3f0] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
+        <button className="sm:text-[1rem] md:text-[9.92px] lg:text-[11.36px] xl:text-[13.36px] 2xl:text-[15.36px] sm:p-[0.8rem_1rem] md:p-[9px_18.8px] lg:p-[10px_20px] xl:p-[10px_24.32px] 2xl:p-[0.8rem_1.9rem] font-[800] rounded-[999px] uppercase bg-[#fef3f0] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
           Find in Stores
         </button>
       </nav>
       <div
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-        className="menu w-full h-screen flex justify-center items-center absolute z-10 bg-[var(--color-milk)]"
+        className="menu w-full h-screen hidden md:flex justify-center items-center absolute z-10 bg-[var(--color-milk)]"
       >
-        <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end gap-9.5 mb-[3.5rem]">
-          <div className=" menu-items flex flex-col items-center leading-[5.7rem] text-[90px] font-[700] uppercase  tracking-tighter">
+        <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end md:gap-20.5 lg:gap-13.5 xl:gap-11.5 2xl:gap-9.5 md:mb-[5rem] lg:mb-[2.2rem] xl:mb-[3rem] 2xl:mb-[3.5rem]">
+          <div className=" menu-items flex flex-col items-center md:leading-[5.2rem] lg:leading-[5.7rem] md:text-[80px] lg:text-[90px] font-[700] uppercase  tracking-tighter">
             {menuData.map((item, idx) => {
               return (
                 <span
@@ -237,7 +242,7 @@ const Navbar = () => {
               );
             })}
           </div>
-          <div className="social-links flex gap-[2rem] font-proxima text-[17px]">
+          <div className="social-links flex md:gap-[1.2rem] xl:gap-[1.5rem] 2xl:gap-[2rem] font-proxima lg:text-[11.5px] md:text-[11.5px] xl:text-[14.5px] 2xl:text-[17px]">
             <span className="m-item">YouTube</span>
             <span className="m-item">Instagram</span>
             <span className="m-item">TikTok</span>

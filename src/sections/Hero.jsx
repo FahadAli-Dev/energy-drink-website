@@ -9,7 +9,7 @@ const Hero = () => {
   gsap.registerPlugin(SplitText);
 
   const tl = gsap.timeline({
-    delay: 0.8,
+    delay: 0.6,
   });
 
   const ftRef = useRef();
@@ -74,7 +74,7 @@ const Hero = () => {
             Protein + Caffeine
           </h1>
         </div>
-        <p className="des text-center m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[70%] md:w-[52%]">
+        <p className="des text-center sm:m-[1.2rem_0rem_2.5rem_0rem] md:m-[1.6rem_0rem_2.1rem_0rem] lg:m-[1.8rem_0rem_2.3rem_0rem] xl:m-[2rem_0rem_2.5rem_0rem] 2xl:m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[76%] md:w-[52%]">
           Live life to the fullest with SPYLT: Shatter boredom and embrace your
           inner kid with every deliciously smooth chug.
         </p>
