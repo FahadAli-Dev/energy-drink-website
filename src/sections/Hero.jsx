@@ -68,7 +68,7 @@ const Hero = () => {
             clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
           }}
           ref={stRef}
-          className="flex justify-center items-center max-[401px]:pb-[0.3rem] pb-[0.6rem] sm:pb-[0rem] sm:py-[0.5rem] 2xl:py-[0rem] bg-[var(--color-yellow-brown)] 2xl:w-[97.5%] backface-hidden mt-[0.4rem] sm:mt-[0.8rem] md:mt-[-0.4rem] lg:mt-[-0.3rem] xl:mt-[-0.8rem] 2xl:mt-[-0.1rem] border-[3px] sm:border-[7.5px] border-solid border-[#faeade]  rotate-357"
+          className="flex justify-center items-center max-[401px]:pb-[0.3rem] pb-[0.6rem] sm:pb-[0rem] sm:py-[0.5rem] 2xl:py-[0rem] bg-[var(--color-yellow-brown)] 2xl:w-[97.5%] backface-hidden max-[401px]:mt-[0.4rem] max-[540px]:mt-[0.5rem] max-[640px]:mt-[1.2rem] sm:mt-[0.8rem] md:mt-[-0.4rem] lg:mt-[-0.3rem] xl:mt-[-0.8rem] 2xl:mt-[-0.1rem] border-[3px] sm:border-[7.5px] border-solid border-[#faeade]  rotate-357"
         >
           <h1 className="title flex justify-center items-center text-[#fce1cd] sm:pb-[1.2rem] 2xl:pb-[1rem] px-[0.3rem] sm:px-[1rem] 2xl:px-[0rem] w-[100%] text-center">
             Protein + Caffeine
