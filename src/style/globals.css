@@ -37,11 +37,11 @@ body {
 }
 
 .title {
-  @apply tracking-tight md:tracking-tighter text-[13vw] sm:text-[83px] md:text-[70px] lg:text-[79px] xl:text-[104px] 2xl:text-[122px] max-[401px]:h-[8vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
+  @apply tracking-tight md:tracking-tighter text-[13vw] sm:text-[83px] md:text-[70px] lg:text-[79px] xl:text-[104px] 2xl:text-[122px] max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
 }
 
 .title > div {
-  @apply flex justify-center items-center max-[401px]:h-[8vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto;
+  @apply flex justify-center items-center max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto;
 }
 
 .title > :nth-child(8) {

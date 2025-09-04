@@ -57,7 +57,7 @@ const Hero = () => {
         controls=""
         className="w-[100%] h-[100%] object-cover hidden md:block"
       ></video>
-      <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[9%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
+      <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[10.5%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
         <div className="h-[auto]">
           <h1 className="title flex justify-center items-center" ref={ftRef}>
             Freaking Delicious
@@ -68,7 +68,7 @@ const Hero = () => {
             clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
           }}
           ref={stRef}
-          className="flex justify-center items-center max-[401px]:pb-[0.3rem] pb-[0.6rem] sm:pb-[0rem] sm:py-[0.5rem] 2xl:py-[0rem] bg-[var(--color-yellow-brown)] 2xl:w-[97.5%] backface-hidden max-[401px]:mt-[0.4rem] max-[540px]:mt-[0.5rem] max-[640px]:mt-[1.2rem] sm:mt-[0.8rem] md:mt-[-0.4rem] lg:mt-[-0.3rem] xl:mt-[-0.8rem] 2xl:mt-[-0.1rem] border-[3px] sm:border-[7.5px] border-solid border-[#faeade]  rotate-357"
+          className="flex justify-center items-center max-[401px]:pb-[0.3rem] pb-[0.6rem] sm:pb-[0rem] sm:py-[0.5rem] 2xl:py-[0rem] bg-[var(--color-yellow-brown)] 2xl:w-[97.5%] backface-hidden max-[401px]:mt-[0.4rem] max-[540px]:mt-[1rem] max-[640px]:mt-[1.2rem] sm:mt-[0.8rem] md:mt-[-0.4rem] lg:mt-[-0.3rem] xl:mt-[-0.8rem] 2xl:mt-[-0.1rem] border-[3px] sm:border-[7.5px] border-solid border-[#faeade]  rotate-357"
         >
           <h1 className="title flex justify-center items-center text-[#fce1cd] sm:pb-[1.2rem] 2xl:pb-[1rem] px-[0.3rem] sm:px-[1rem] 2xl:px-[0rem] w-[100%] text-center">
             Protein + Caffeine
@@ -76,7 +76,7 @@ const Hero = () => {
         </div>
         <p className="des text-center m-[1.5rem_0rem_2.5rem_0rem] sm:m-[1.2rem_0rem_2.5rem_0rem] md:m-[1.6rem_0rem_2.1rem_0rem] lg:m-[1.8rem_0rem_2.3rem_0rem] xl:m-[2rem_0rem_2.5rem_0rem] 2xl:m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[76%] md:w-[52%]">
           Live life to the fullest with SPYLT: Shatter boredom and embrace your
-          inner kid with every deliciously smooth chug
+          inner kid with every deliciously smooth chug.
         </p>
         <div className="btn">Chug a Spylt</div>
       </div>
