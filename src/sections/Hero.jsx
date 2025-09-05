@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import Image from "next/image";
 import { useRef } from "react";
 
 const Hero = () => {
@@ -57,6 +58,12 @@ const Hero = () => {
         controls=""
         className="w-[100%] h-[100%] object-cover hidden md:block"
       ></video>
+      <Image
+        src="/images/hero-bg.png"
+        alt="img"
+        fill
+        className="object-contain scale-[1.8] overflow-hidden max-[330px]:translate-y-[-25%] max-[400px]:translate-y-[-19.8%] max-[580px]:translate-y-[-15%] md:hidden"
+      />
       <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[10.5%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
         <div className="h-[auto]">
           <h1 className="title flex justify-center items-center" ref={ftRef}>
@@ -79,6 +86,15 @@ const Hero = () => {
           inner kid with every deliciously smooth chug.
         </p>
         <div className="btn">Chug a Spylt</div>
+      </div>
+      <div className="w-[85%] h-[100%] absolute left-1/2 translate-x-[-50%] max-[340px]:top-[29%] max-[440px]:top-[34%] max-[540px]:top-[44%] max-[640px]:top-[50%] sm:top-[65%] md:hidden">
+        <Image
+          src="/images/hero-img.png"
+          alt="img"
+          fill
+          sizes="652"
+          className="object-contain"
+        />
       </div>
     </div>
   );

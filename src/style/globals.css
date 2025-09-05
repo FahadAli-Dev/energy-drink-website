@@ -29,6 +29,7 @@ body {
   color: #523122;
   background-color: var(--color-milk);
   overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: smooth;
 }
 
