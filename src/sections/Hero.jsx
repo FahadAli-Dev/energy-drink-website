@@ -50,7 +50,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="w-[100%] h-screen relative">
+    <div className="w-[100%] h-screen relative overflow-hidden">
       <video
         src="/videos/hero-bg.mp4"
         autoPlay
@@ -62,6 +62,7 @@ const Hero = () => {
         src="/images/hero-bg.png"
         alt="img"
         fill
+        priority
         className="object-contain scale-[1.8] overflow-hidden max-[330px]:translate-y-[-25%] max-[400px]:translate-y-[-19.8%] max-[580px]:translate-y-[-15%] md:hidden"
       />
       <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[10.5%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
@@ -92,6 +93,7 @@ const Hero = () => {
           src="/images/hero-img.png"
           alt="img"
           fill
+          priority
           sizes="652"
           className="object-contain"
         />
