@@ -38,11 +38,13 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: #523122;
-  background-color: var(--color-milk);
+  /* background-color: var(--color-milk); */
+  /* background-color: #222123; */
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .btn {

@@ -185,7 +185,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="z-50 p-[1rem_0.5rem] sm:p-[1rem_0.8rem] md:p-[0.4rem_1.2rem] lg:p-[0rem_1.5rem] xl:p-[1rem_1.5rem] 2xl:p-[1.5rem_2rem] flex justify-between items-center absolute top-0 w-[100%]">
+      <nav className="z-50 p-[1rem_0.5rem] sm:p-[1rem_0.8rem] md:p-[0.4rem_1.2rem] lg:p-[0rem_1.5rem] xl:p-[1rem_1.5rem] 2xl:p-[1.5rem_2rem] flex justify-between items-center fixed top-0 w-[100%]">
         <div
           onClick={() => window.location.reload()}
           className="relative w-[80px] md:w-[59px] lg:w-[62px] xl:w-[76px] 2xl:w-[92px] h-[48px] md:h-[29px] lg:h-[72px] xl:h-[38px] 2xl:h-[46px]"

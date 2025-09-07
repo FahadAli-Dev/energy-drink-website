@@ -1,5 +1,53 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { useRef } from "react";
+
 const Message = () => {
-  return <div className="w-full h-screen">Message</div>;
+  const tl = gsap.timeline();
+  const textRef = useRef(null);
+  const textRef2 = useRef(null);
+  gsap.registerPlugin(SplitText);
+
+  useGSAP(() => {
+    const split = SplitText.create(textRef.current, { type: "words" });
+
+    tl.from(split.words, {
+      stagger: 1,
+      opacity: 0.3,
+      scrollTrigger: {
+        trigger: ".m-wrapper",
+        start: "top 60%",
+        end: "30% 70%",
+        scrub: true,
+        markers: true,
+      },
+    });
+  });
+  return (
+    <div className="bg-[#7f3b2d] text-[var(--color-milk)] m-wrapper w-full h-[126vh] pt-[6rem]">
+      <div className="relative mx-auto m-contant flex flex-col justify-center items-center gap-[5.5rem] w-[65%] text-center">
+        <span ref={textRef} className="title !leading-[7.8rem]">
+          Stir up your <br /> fearless past and
+        </span>
+        <span className="title !text-[119px] rotate-3 left-1/2 translate-x-[-46%] top-1/2 translate-y-[-80%] absolute text-[#7f3b2d] bg-[var(--color-light-brown)] w-[20.5rem] pb-[1.2rem] !leading-[7.5rem] border-[7.5px] border-solid border-[#7f3b2d] p-[0.5rem_0.2rem] h-[9rem]">
+          FUEL UP
+        </span>
+        <span ref={textRef2} className="title !leading-[7.8rem]">
+          your future with every gulp of Perfect Protein
+        </span>
+        <span
+          style={{ wordSpacing: "0.3rem" }}
+          className="des w-[40%] !leading-[1.5rem] mt-[-1.5rem]"
+        >
+          Rev up your rebel spirit and feed the adventure of life with SPYLT,
+          where you’re one chug away from epic nostalgia and fearless fun.
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default Message;
