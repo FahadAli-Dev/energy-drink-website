@@ -13,6 +13,7 @@ const Message = () => {
 
   useGSAP(() => {
     const split = SplitText.create(textRef.current, { type: "words" });
+    const split2 = SplitText.create(textRef2.current, { type: "words" });
 
     tl.from(split.words, {
       stagger: 1,
@@ -22,9 +23,22 @@ const Message = () => {
         start: "top 60%",
         end: "30% 70%",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
-    });
+    }).from(
+      split2.words,
+      {
+        opacity: 0.3,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: ".m-wrapper",
+          start: "60% 90%",
+          end: "95% bottom",
+          scrub: true,
+        },
+      },
+      ">"
+    );
   });
   return (
     <div className="bg-[#7f3b2d] text-[var(--color-milk)] m-wrapper w-full h-[126vh] pt-[6rem]">
