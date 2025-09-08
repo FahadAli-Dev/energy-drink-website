@@ -10,6 +10,7 @@ const Message = () => {
   const textRef = useRef(null);
   const textRef2 = useRef(null);
   gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(useGSAP);
 
   useGSAP(() => {
     const split = SplitText.create(textRef.current, { type: "words" });
@@ -65,14 +66,14 @@ const Message = () => {
           duration: 2,
           scrollTrigger: {
             trigger: ".m-wrapper",
-            start: "20% top",
-            end: "top top",
+            start: "30% top",
+            end: "31% top",
             scrub: 1,
           },
         },
         ">"
       );
-  });
+  }, []);
   return (
     <div className="bg-[#7f3b2d] text-[var(--color-milk)] m-wrapper w-full h-[130vh] pt-[6rem]">
       <div className="relative mx-auto m-contant flex flex-col justify-center items-center gap-[5.5rem] w-[65%] text-center">
