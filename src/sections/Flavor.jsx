@@ -8,17 +8,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Flavor = () => {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
-  d;
   useGSAP(() => {
     gsap.to(".f-container", {
-      translateX: "-300%",
+      translateX: "-400%",
       ease: "linear",
       scrollTrigger: {
         trigger: ".f-wrapper",
         start: "top 0%",
         end: "top -150%",
         scrub: 1,
-        markers: true,
+        // markers: true,
         scroller: "body",
         pin: true,
       },

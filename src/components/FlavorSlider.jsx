@@ -4,12 +4,14 @@ import { FlavorData } from "@/utils/data";
 const FlavorSlider = () => {
   return (
     <>
-      <div className="fs-wrapper absolute translate-x-[85%] right-0 bottom-[0] flex gap-[3rem] w-[300%] h-[100%]">
+      <div className="fs-wrapper absolute translate-x-[87%] right-0 bottom-[0] flex gap-[15rem] w-[370%] h-[100%]">
         {FlavorData.map((e, i) => {
           return (
             <div
               key={i}
-              className="w-[100%] h-[100%] relative top-[50%] translate-y-[-57%] translate-x-[5rem] rotate-[-8deg]"
+              className={`w-[100%] h-[100%] relative top-[50%] translate-y-[-57%] translate-x-[5rem] ${
+                i % 2 == 0 ? "rotate-[-8deg]" : "rotate-[8deg]"
+              }`}
             >
               <Image
                 src={e.bgImg}
