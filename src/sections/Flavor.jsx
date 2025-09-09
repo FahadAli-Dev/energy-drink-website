@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Flavor = () => {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
-
+  d;
   useGSAP(() => {
     gsap.to(".f-container", {
       translateX: "-300%",
