@@ -2,37 +2,37 @@ export const FlavorData = [
   {
     bgImg: "/images/brown-bg.svg",
     bottleImg: "/images/brown-drink.webp",
-    cokolateChipImg: "/images/brown-element",
+    cokolateChipImg: "/images/brown-elements.webp",
     FlavorName: "Cololate Milk",
   },
   {
     bgImg: "/images/red-bg.svg",
     bottleImg: "/images/red-drink.webp",
-    cokolateChipImg: "/images/red-element",
+    cokolateChipImg: "/images/red-elements.webp",
     FlavorName: "Strawberry Milk",
   },
   {
     bgImg: "images/blue-bg.svg",
     bottleImg: "/images/blue-drink.webp",
-    cokolateChipImg: "/images/blue-element",
+    cokolateChipImg: "/images/blue-elements.webp",
     FlavorName: "Cookies & Cream",
   },
   {
     bgImg: "images/orange-bg.svg",
     bottleImg: "/images/orange-drink.webp",
-    cokolateChipImg: "/images/-orange-element",
+    cokolateChipImg: "/images/-orange-elements.webp",
     FlavorName: "Peanut Butter Cream",
   },
   {
     bgImg: "images/white-bg.svg",
     bottleImg: "/images/white-drink.webp",
-    cokolateChipImg: "/images/white-element",
+    cokolateChipImg: "/images/white-elements.webp",
     FlavorName: "Vanilla Milkshake",
   },
   {
     bgImg: "images/black-bg.svg",
     bottleImg: "/images/black-drink.webp",
-    cokolateChipImg: "/images/black-element",
+    cokolateChipImg: "/images/black-elements.webp",
     FlavorName: "Max Chocolate Milk",
   },
 ];
