@@ -31,7 +31,7 @@ const FlavorSlider = () => {
                 src={e.cokolateChipImg}
                 alt="img-elements"
                 fill
-                className="translate-y-[-15%] object-contain"
+                className="translate-y-[-12%] object-contain"
               />
             </div>
           );

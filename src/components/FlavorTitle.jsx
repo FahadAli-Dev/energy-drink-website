@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 const FlavorTitle = () => {
-  gsap.registerPlugin(SplitText, ScrollTrigger, useGSAP);
+  gsap.registerPlugin(SplitText, ScrollTrigger);
 
   useGSAP(() => {
     const split1 = SplitText.create(".t1", { type: "chars" });

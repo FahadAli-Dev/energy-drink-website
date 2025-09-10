@@ -8,8 +8,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
   useEffect(() => {
     const tl2 = gsap.timeline({
