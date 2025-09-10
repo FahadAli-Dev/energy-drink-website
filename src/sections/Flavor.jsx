@@ -18,6 +18,7 @@ const Flavor = () => {
         end: "top -150%",
         scrub: 1,
         markers: true,
+        // scroller: "#smooth-content",
         pin: true,
       },
     });
