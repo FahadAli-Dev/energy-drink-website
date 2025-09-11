@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Flavor from "@/sections/Flavor";
 import Hero from "@/sections/Hero";
 import Message from "@/sections/Message";
+import Nutritions from "@/sections/Nutritions";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -16,8 +17,6 @@ const Page = () => {
       smooth: 1,
       effects: true,
     });
-
-    return () => smoother.kill();
   }, []);
   return (
     <>
@@ -27,6 +26,7 @@ const Page = () => {
           <Hero />
           <Message />
           <Flavor />
+          <Nutritions />
         </div>
       </div>
     </>

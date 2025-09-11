@@ -5,19 +5,20 @@ import FlavorTitle from "@/components/FlavorTitle";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 
 const Flavor = () => {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to(".f-container", {
-      translateX: "-400%",
+      translateX: "-350%",
       ease: "linear",
       scrollTrigger: {
         trigger: ".f-wrapper",
         start: "top 0%",
         end: "top -150%",
         scrub: 1,
-        markers: true,
+        // markers: true,
         // scroller: "#smooth-content",
         pin: true,
       },

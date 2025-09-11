@@ -82,7 +82,7 @@ const Message = () => {
         </span>
         <span
           style={{ clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)" }}
-          className="box z-[1] opacity-0 title !text-[119px] rotate-3 left-1/2 translate-x-[-46%] top-1/2 translate-y-[-80%] absolute text-[#7f3b2d] bg-[var(--color-light-brown)] w-[20.5rem] pb-[1.2rem] !leading-[7.5rem] border-[7.5px] border-solid border-[#7f3b2d] p-[0.5rem_0.2rem] h-[9rem]"
+          className="box z-[1] opacity-0 title !text-[119px] rotate-3 backface-hidden left-1/2 translate-x-[-46%] top-1/2 translate-y-[-80%] absolute text-[#7f3b2d] bg-[var(--color-light-brown)] w-[20.5rem] pb-[1.2rem] !leading-[7.5rem] border-[7.5px] border-solid border-[#7f3b2d] p-[0.5rem_0.2rem] h-[9rem]"
         >
           FUEL UP
         </span>
