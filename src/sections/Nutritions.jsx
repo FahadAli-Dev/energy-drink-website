@@ -17,6 +17,7 @@ const Nutritions = () => {
           alt="img"
           fill
           className="object-fill"
+          f
         />
       </div>
       <div className="flex flex-col absolute">
