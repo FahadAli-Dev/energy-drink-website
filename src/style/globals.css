@@ -59,7 +59,7 @@ body {
   @apply flex justify-center items-center max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto;
 }
 
-.title > :nth-child(8) {
+.ht > :nth-child(8) {
   @apply mr-[0.5rem] sm:mr-[1rem] 2xl:mr-[1.2rem];
 }
 

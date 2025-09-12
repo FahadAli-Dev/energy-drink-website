@@ -101,7 +101,10 @@ const Hero = () => {
         />
         <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[10.5%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
           <div className="h-[auto]">
-            <h1 className="title flex justify-center items-center" ref={ftRef}>
+            <h1
+              className="title ht flex justify-center items-center"
+              ref={ftRef}
+            >
               Freaking Delicious
             </h1>
           </div>

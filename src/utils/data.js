@@ -37,6 +37,33 @@ export const FlavorData = [
   },
 ];
 
+export const NutritionsData = [
+  {
+    label: "Potassium",
+    amount: "245mg",
+  },
+  {},
+  {
+    label: "Calcium",
+    amount: "500mg",
+  },
+  {},
+  {
+    label: "Vitamin A",
+    amount: "176mcg",
+  },
+  {},
+  {
+    label: "Vitamin D",
+    amount: "5mcg",
+  },
+  {},
+  {
+    label: "Iron",
+    amount: "1mg",
+  },
+];
+
 export const menuData = [
   {
     title: "Shop",

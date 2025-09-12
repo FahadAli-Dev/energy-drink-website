@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import Benefit from "@/sections/Benefit";
 import Flavor from "@/sections/Flavor";
 import Hero from "@/sections/Hero";
 import Message from "@/sections/Message";
@@ -27,6 +28,7 @@ const Page = () => {
           <Message />
           <Flavor />
           <Nutritions />
+          <Benefit />
         </div>
       </div>
     </>
