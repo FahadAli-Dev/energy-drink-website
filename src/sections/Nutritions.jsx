@@ -55,7 +55,7 @@ const Nutritions = () => {
     });
   });
   return (
-    <section className="nt-wrapper w-[100%] h-[120vh] relative bg-[#dfd0b6]">
+    <section className="nt-wrapper w-[100%] h-[120vh] translate-y-[-1px] relative bg-[#dfd0b6]">
       <div className="relative w-[100%] h-[30%]">
         <Image
           src="/images/slider-dip.png"

@@ -5,7 +5,6 @@ import FlavorTitle from "@/components/FlavorTitle";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
 
 const Flavor = () => {
   gsap.registerPlugin(ScrollTrigger);

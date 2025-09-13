@@ -6,6 +6,7 @@ import Flavor from "@/sections/Flavor";
 import Hero from "@/sections/Hero";
 import Message from "@/sections/Message";
 import Nutritions from "@/sections/Nutritions";
+import VideoPin from "@/sections/VideoPin";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -29,6 +30,7 @@ const Page = () => {
           <Flavor />
           <Nutritions />
           <Benefit />
+          <VideoPin />
         </div>
       </div>
     </>
