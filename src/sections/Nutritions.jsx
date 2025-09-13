@@ -51,6 +51,7 @@ const Nutritions = () => {
         start: "top 16%",
         end: "top 15%",
         scrub: 1,
+        f,
       },
     });
   });
