@@ -21,7 +21,7 @@ const VideoPin = () => {
         clipPath: "circle(70.7% at 50% 50%)",
         scrollTrigger: {
           trigger: ".v-wrapper",
-          start: "top 20%",
+          start: "top 30%",
           end: "top -200%",
           scrub: true,
         },
@@ -50,7 +50,7 @@ const VideoPin = () => {
         style={{
           clipPath: "circle(6.4% at 50% 50%)",
         }}
-        className="absolute mt-[-18rem] revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
+        className="absolute rounded-[999px] mt-[-18rem] revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
       >
         <video
           src="/videos/pin-video.mp4"
