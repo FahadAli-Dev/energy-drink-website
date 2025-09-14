@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Benefit = () => {
   useGSAP(() => {
     const splitBt = SplitText.create(".b-split", { type: "words" });
+    const splitBt2 = SplitText.create(".b-split2", { type: "words" });
     gsap.from(splitBt.words, {
       y: 5,
       opacity: 0,
@@ -72,10 +73,24 @@ const Benefit = () => {
         scrub: true,
       },
     });
+
+    gsap.from(splitBt2.words, {
+      y: 5,
+      opacity: 0,
+      stagger: 0.8,
+      ease: "power1.in",
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".b-wrapper",
+        start: "top -60%",
+        end: "top -61%",
+        scrub: 1,
+      },
+    });
   });
 
   return (
-    <section className="b-wrapper w-[100%] h-[120vh] bg-[var(--color-black)]">
+    <section className="b-wrapper w-[100%] h-[125vh] overflow-visible bg-[var(--color-black)]">
       <div className="b-container flex flex-col justify-center items-center w-[80%] mx-auto">
         <span
           style={{ wordSpacing: "0.3rem" }}
@@ -108,6 +123,12 @@ const Benefit = () => {
           className="title backface-hidden bt-4 !tracking-tighter opacity-0 !text-[119px] border-[7.6px] border-solid border-[var(--color-black)] px-[3.5rem] pb-[0.8rem] text-center bg-[#fed775] text-[#2e2d2f] rotate-[-5deg] mt-[0.2rem]"
         >
           Lactose free
+        </span>
+        <span
+          style={{ wordSpacing: "0.3rem" }}
+          className="font-proxima b-split2 text-[1rem] text-center mt-[3rem] text-[var(--color-milk)]"
+        >
+          And much more...
         </span>
       </div>
     </section>

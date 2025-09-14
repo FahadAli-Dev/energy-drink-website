@@ -5,17 +5,36 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 const VideoPin = () => {
+  const tl = gsap.timeline();
   useGSAP(() => {
-    gsap.to(".revealVideo", {
-      clipPath: "circle(70.7% at 50% 50%)",
+    tl.to(".revealVideo", {
+      marginTop: "0rem",
       scrollTrigger: {
         trigger: ".v-wrapper",
-        start: "top 0%",
-        end: "top -200%",
+        start: "top 50%",
+        end: "top 0%",
         scrub: true,
-        pin: true,
       },
-    });
+    })
+      .to(".revealVideo", {
+        clipPath: "circle(14% at 50% 50%)",
+        scrollTrigger: {
+          trigger: ".v-wrapper",
+          start: "top 20%",
+          end: "top 0%",
+          scrub: true,
+        },
+      })
+      .to(".revealVideo", {
+        clipPath: "circle(70.7% at 50% 50%)",
+        scrollTrigger: {
+          trigger: ".v-wrapper",
+          start: "top 0%",
+          end: "top -200%",
+          scrub: true,
+          pin: true,
+        },
+      });
 
     gsap.to(".rotating-img", {
       rotate: 360,
@@ -30,7 +49,7 @@ const VideoPin = () => {
         style={{
           clipPath: "circle(6.4% at 50% 50%)",
         }}
-        className="relative revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
+        className="absolute mt-[-18rem] revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
       >
         <video
           src="/videos/pin-video.mp4"
