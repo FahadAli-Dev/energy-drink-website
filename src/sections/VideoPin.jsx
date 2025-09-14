@@ -5,8 +5,9 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 const VideoPin = () => {
-  const tl = gsap.timeline();
   useGSAP(() => {
+    const tl = gsap.timeline();
+
     tl.to(".revealVideo", {
       marginTop: "0rem",
       scrollTrigger: {
@@ -17,16 +18,16 @@ const VideoPin = () => {
       },
     })
       .to(".revealVideo", {
-        clipPath: "circle(14% at 50% 50%)",
+        clipPath: "circle(70.7% at 50% 50%)",
         scrollTrigger: {
           trigger: ".v-wrapper",
           start: "top 20%",
-          end: "top 0%",
+          end: "top -200%",
           scrub: true,
         },
       })
+
       .to(".revealVideo", {
-        clipPath: "circle(70.7% at 50% 50%)",
         scrollTrigger: {
           trigger: ".v-wrapper",
           start: "top 0%",
