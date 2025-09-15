@@ -1,22 +1,69 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitText from "gsap/SplitText";
 import Image from "next/image";
+import { useEffect } from "react";
 
+gsap.registerPlugin(ScrollTrigger, SplitText);
 const FooterBody = () => {
+  useGSAP(() => {
+    const fSplit2 = SplitText.create(".ft-2", { type: "chars" });
+
+    gsap.from(fSplit2.chars, {
+      yPercent: 200,
+      opacity: 0,
+      stagger: 0.02,
+      ease: "inOut",
+      duration: 0.2,
+      scrollTrigger: {
+        trigger: ".fb-wrapper",
+        start: "top 38%",
+        end: "top 37.9%",
+        scrub: 1,
+      },
+    });
+
+    const video = document.querySelector(".f-video");
+
+    gsap.to(".f-video", {
+      visibility: "visible",
+      scrollTrigger: {
+        trigger: ".fb-wrapper",
+        start: "top 10%",
+        toggleActions: "play none none none",
+        onEnter: () => {
+          video.play();
+          gsap.to(".f-video", { visibility: "visible" });
+        },
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: ".fb-wrapper",
+      start: "top 100%",
+      onLeaveBack: () => {
+        gsap.to(".f-video", { visibility: "hidden" });
+      },
+    });
+  });
+
   return (
-    <div className="w-[100%] h-[132vh] relative overflow-hidden bg-[var(--color-black)]">
+    <div className="w-[100%] fb-wrapper h-[132vh] relative overflow-hidden bg-[var(--color-black)]">
       <video
         src="/videos/splash.mp4"
-        autoPlay
+        // autoPlay
         controls=""
         muted
-        className="absolute top-[-7%] mix-blend-lighten object-contain"
+        className="absolute f-video invisible z-[2] top-[-7%] mix-blend-lighten object-contain"
       />
-      <div className="text-center mt-[9.6rem]">
-        <span className="title text-[var(--color-milk)] !text-[119px]">
-          #chugresponsibly
-        </span>
-      </div>
-      <div className="flex gap-[1rem] justify-center mt-[4.3rem]">
-        <div className="w-[76.8px] h-[76.8px] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
+
+      <span className="title ft-2 w-[100%] absolute z-[1] top-[16%] text-center overflow-hidden text-[var(--color-milk)] !text-[119px]">
+        #chugresponsibly
+      </span>
+
+      <div className="flex gap-[1rem] justify-center z-[3] w-[100%] absolute top-[37%]">
+        <div className="w-[76.8px] h-[76.8px] bg-[#0000] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
           <Image
             src="/images/yt.svg"
             alt="youtube"
@@ -24,7 +71,7 @@ const FooterBody = () => {
             height={30.71}
           />
         </div>
-        <div className="w-[76.8px] h-[76.8px] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
+        <div className="w-[76.8px] h-[76.8px] bg-[#0000] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
           <Image
             src="/images/insta.svg"
             alt="instagram"
@@ -32,7 +79,7 @@ const FooterBody = () => {
             height={30.71}
           />
         </div>
-        <div className="w-[76.8px] h-[76.8px] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
+        <div className="w-[76.8px] h-[76.8px] bg-[#0000] rounded-[999px] hover:bg-[#ffffff1a] cursor-pointer duration-[0.3s] ease-out flex justify-center items-center border-[1px] border-solid border-[#faeade33]">
           <Image
             src="/images/tiktok.svg"
             alt="ticktock"
@@ -41,7 +88,7 @@ const FooterBody = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-y-[3rem] mt-[8rem] p-[2rem] des text-[var(--color-milk)]">
+      <div className="grid grid-cols-2 grid-rows-2 z-[3] gap-y-[3rem] w-[100%] p-[2rem] absolute bottom-0 des text-[var(--color-milk)]">
         <div className="flex gap-[3.5rem]">
           <span>SPYLT Flavors</span>
           <span className="flex flex-col gap-[0.5rem]">
