@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 import Image from "next/image";
-import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const FooterBody = () => {
@@ -26,16 +25,11 @@ const FooterBody = () => {
 
     const video = document.querySelector(".f-video");
 
-    gsap.to(".f-video", {
-      visibility: "visible",
-      scrollTrigger: {
-        trigger: ".fb-wrapper",
-        start: "top 10%",
-        toggleActions: "play none none none",
-        onEnter: () => {
-          video.play();
-          gsap.to(".f-video", { visibility: "visible" });
-        },
+    ScrollTrigger.create({
+      trigger: ".fb-wrapper",
+      start: "top 10%",
+      onEnter: () => {
+        video.play();
       },
     });
 
@@ -43,7 +37,7 @@ const FooterBody = () => {
       trigger: ".fb-wrapper",
       start: "top 100%",
       onLeaveBack: () => {
-        gsap.to(".f-video", { visibility: "hidden" });
+        video.currentTime = 0;
       },
     });
   });
@@ -52,10 +46,9 @@ const FooterBody = () => {
     <div className="w-[100%] fb-wrapper h-[132vh] relative overflow-hidden bg-[var(--color-black)]">
       <video
         src="/videos/splash.mp4"
-        // autoPlay
         controls=""
         muted
-        className="absolute f-video invisible z-[2] top-[-7%] mix-blend-lighten object-contain"
+        className="absolute f-video z-[2] top-[-7%] mix-blend-lighten object-contain"
       />
 
       <span className="title ft-2 w-[100%] absolute z-[1] top-[16%] text-center overflow-hidden text-[var(--color-milk)] !text-[119px]">
