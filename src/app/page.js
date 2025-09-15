@@ -7,6 +7,7 @@ import Flavor from "@/sections/Flavor";
 import Hero from "@/sections/Hero";
 import Message from "@/sections/Message";
 import Nutritions from "@/sections/Nutritions";
+import Testimonial from "@/sections/Testimonial";
 import VideoPin from "@/sections/VideoPin";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -32,6 +33,7 @@ const Page = () => {
           <Nutritions />
           <Benefit />
           <VideoPin />
+          <Testimonial />
           <Footer />
         </div>
       </div>
