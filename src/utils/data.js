@@ -37,6 +37,51 @@ export const FlavorData = [
   },
 ];
 
+export const testimonialData = [
+  {
+    name: "Madlson",
+    video: "/videos/f1.mp4",
+    profileIcon: "/images/p1.png",
+    z: "1",
+  },
+  {
+    name: "Alexander",
+    video: "/videos/f2.mp4",
+    profileIcon: "/images/p2.png",
+    z: "2",
+  },
+  {
+    name: "Andrew",
+    video: "/videos/f3.mp4",
+    profileIcon: "/images/p3.png",
+    z: "3",
+  },
+  {
+    name: "Bryan",
+    video: "/videos/f4.mp4",
+    profileIcon: "/images/p4.png",
+    z: "4",
+  },
+  {
+    name: "Chris",
+    video: "/videos/f5.mp4",
+    profileIcon: "/images/p5.png",
+    z: "5",
+  },
+  {
+    name: "Devante",
+    video: "/videos/f6.mp4",
+    profileIcon: "/images/p6.png",
+    z: "6",
+  },
+  {
+    name: "Melissa",
+    video: "/videos/f7.mp4",
+    profileIcon: "/images/p7.png",
+    z: "7",
+  },
+];
+
 export const NutritionsData = [
   {
     label: "Potassium",

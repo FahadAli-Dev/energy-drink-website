@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CustomEase from "gsap/CustomEase";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 
@@ -19,10 +20,15 @@ const VideoPin = () => {
     })
       .to(".revealVideo", {
         clipPath: "circle(70.7% at 50% 50%)",
+        ease: CustomEase.create(
+          "custom",
+          "M0,0 C0.493,0.479 0.406,0.406 0.528,0.582 0.616,0.709 0.744,1 1,1 "
+        ),
+
         scrollTrigger: {
           trigger: ".v-wrapper",
           start: "top 30%",
-          end: "top -200%",
+          end: "top -150%",
           scrub: true,
         },
       })
@@ -31,7 +37,7 @@ const VideoPin = () => {
         scrollTrigger: {
           trigger: ".v-wrapper",
           start: "top 0%",
-          end: "top -200%",
+          end: "top -240%",
           scrub: true,
           pin: true,
         },

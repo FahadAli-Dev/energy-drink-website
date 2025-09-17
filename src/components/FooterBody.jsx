@@ -28,6 +28,7 @@ const FooterBody = () => {
     ScrollTrigger.create({
       trigger: ".fb-wrapper",
       start: "top 10%",
+
       onEnter: () => {
         video.play();
       },
@@ -36,6 +37,7 @@ const FooterBody = () => {
     ScrollTrigger.create({
       trigger: ".fb-wrapper",
       start: "top 100%",
+
       onLeaveBack: () => {
         video.currentTime = 0;
       },
@@ -105,7 +107,7 @@ const FooterBody = () => {
               style={{ wordSpacing: "-3px" }}
               type="email"
               placeholder="Enter your email"
-              className="placeholder:text-[#999999] focus:outline-none pb-[15px] border-b-[1px] border-solid borderb-[#d9d9d9] text-[2rem] font-bold font-sans"
+              className="placeholder:text-[#999999] focus:outline-none pb-[20px] border-b-[1.5px] border-solid borderb-[#d9d9d9] focus:border-[#3898ec] text-[2rem] font-bold font-sans"
             />
 
             <Image

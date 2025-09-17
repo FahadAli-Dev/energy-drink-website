@@ -1,5 +1,5 @@
-import FooterHead from "./FooterHead";
-import FooterBody from "./FooterBody";
+import FooterHead from "../components/FooterHead";
+import FooterBody from "../components/FooterBody";
 
 const Footer = () => {
   return (
