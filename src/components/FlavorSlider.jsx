@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FlavorData } from "@/utils/data";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const FlavorSlider = () => {
   useEffect(() => {
@@ -33,6 +34,22 @@ const FlavorSlider = () => {
     });
   }, []);
 
+  useGSAP(() => {
+    gsap.to(
+      ".flavor-0, .flavor-1, .flavor-2, .flavor-3, .flavor-4, .flavor-5",
+      {
+        translateX: "-800%",
+        stagger: 0.001,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: ".fs-wrapper",
+          start: "top 0%",
+          end: "top -660%",
+          scrub: true,
+        },
+      }
+    );
+  });
   return (
     <>
       <div className="fs-wrapper absolute translate-x-[87%] right-0 bottom-[0] flex gap-[15rem] w-[370%] h-[100%]">
@@ -40,7 +57,7 @@ const FlavorSlider = () => {
           return (
             <div
               key={i}
-              className={`w-[100%] h-[100%] relative top-[50%] translate-y-[-57%] translate-x-[5rem] ${
+              className={`flavor-${i} w-[100%] h-[100%] relative top-[50%] translate-y-[-57%] translate-x-[5rem] ${
                 i % 2 == 0 ? "rotate-[-8deg]" : "rotate-[8deg]"
               }`}
             >

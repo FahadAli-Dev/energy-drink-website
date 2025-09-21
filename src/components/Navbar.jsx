@@ -213,7 +213,7 @@ const Navbar = () => {
       </nav>
       <div
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-        className="menu w-full h-screen hidden md:flex justify-center items-center absolute top-0 z-10 bg-[var(--color-milk)]"
+        className="menu w-full h-screen hidden md:flex justify-center items-center fixed top-0 z-10 bg-[var(--color-milk)]"
       >
         <div className="menu-left flex-1 flex flex-col h-[100%] items-center justify-end md:gap-20.5 lg:gap-13.5 xl:gap-11.5 2xl:gap-9.5 md:mb-[5rem] lg:mb-[2.2rem] xl:mb-[3rem] 2xl:mb-[3.5rem]">
           <div className=" menu-items flex flex-col items-center md:leading-[5.2rem] lg:leading-[5.7rem] md:text-[80px] lg:text-[90px] font-[700] uppercase  tracking-tighter">

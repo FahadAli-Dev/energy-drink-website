@@ -49,6 +49,17 @@ const FlavorTitle = () => {
         scrub: 1,
       },
     });
+
+    gsap.to(".ft-wrapper", {
+      translateX: "-100%",
+      ease: "linear",
+      scrollTrigger: {
+        trigger: ".ft-wrapper",
+        start: "top 0%",
+        end: "top -80%",
+        scrub: true,
+      },
+    });
   });
   return (
     <div className="ft-wrapper flex flex-col justify-center items-center !leading-0 h-[100%] lg:pl-[1.5rem] w-[50%]">

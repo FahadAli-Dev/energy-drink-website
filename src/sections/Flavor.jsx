@@ -3,36 +3,26 @@
 import FlavorSlider from "@/components/FlavorSlider";
 import FlavorTitle from "@/components/FlavorTitle";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Flavor = () => {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-    gsap.to(".f-container", {
-      translateX: "-350%",
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ".f-wrapper",
-        start: "top 0%",
-        end: "top -150%",
-        scrub: 1,
-        // markers: true,
-        // scroller: "#smooth-content",
-        pin: true,
-      },
+    ScrollTrigger.create({
+      trigger: ".flavor-section",
+      start: "top 0%",
+      end: "top -660%",
+      pin: true,
     });
   });
+
   return (
-    <div className="f-wrapper w-[100%] relative h-screen bg-[var(--color-milk)]">
-      <div className="f-container h-[100%] relative">
-        <FlavorTitle />
-        <FlavorSlider />
-      </div>
+    <section className="flavor-section w-[100%] h-[100vh] relative bg-[var(--color-milk)]">
+      <FlavorTitle />
+      <FlavorSlider />
       <button className="btn absolute bottom-[4%] left-1/2 translate-x-[-50%]">
         Get it now
       </button>
-    </div>
+    </section>
   );
 };
 
