@@ -51,6 +51,18 @@ body {
   @apply text-[1rem] md:text-[11px] xl:text-[13.5px] 2xl:text-[1rem] w-[165px] md:w-[128px] xl:w-[160px] 2xl:w-[192px] h-[48px] md:h-[38px] xl:h-[47.5px] 2xl:h-[56px] font-[800] rounded-[999px] flex justify-center items-center uppercase bg-[var(--color-light-brown)] cursor-pointer;
 }
 
+.title-primary {
+  @apply sm:text-[8.2rem] md:text-[9.9rem] lg:text-[13.1rem] xl:text-[16.4rem] 2xl:text-[19.7rem];
+}
+
+/* .title-secondary {
+  @apply;
+} */
+
+/* .title-tertiary {
+  @apply;
+} */
+
 .title {
   @apply tracking-tight md:tracking-tighter text-[13vw] sm:text-[83px] md:text-[70px] lg:text-[79px] xl:text-[104px] 2xl:text-[122px] max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
 }
