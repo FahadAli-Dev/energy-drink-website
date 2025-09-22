@@ -20,6 +20,7 @@ const Page = () => {
     ScrollSmoother.create({
       smooth: 1,
       effects: true,
+      normalizeScroll: true,
     });
   }, []);
   return (

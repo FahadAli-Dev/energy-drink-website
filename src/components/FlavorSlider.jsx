@@ -38,7 +38,7 @@ const FlavorSlider = () => {
     gsap.to(
       ".flavor-0, .flavor-1, .flavor-2, .flavor-3, .flavor-4, .flavor-5",
       {
-        translateX: "-800%",
+        translateX: "-900%",
         stagger: 0.001,
         ease: "linear",
         scrollTrigger: {

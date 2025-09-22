@@ -10,8 +10,10 @@ const Flavor = () => {
     ScrollTrigger.create({
       trigger: ".flavor-section",
       start: "top 0%",
-      end: "top -660%",
+      end: "top -550%",
       pin: true,
+      anticipatePin: 1,
+      pinType: "transform",
     });
   });
 

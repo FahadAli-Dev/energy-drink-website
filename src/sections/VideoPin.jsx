@@ -55,8 +55,10 @@ const VideoPin = () => {
       <div
         style={{
           clipPath: "circle(6.4% at 50% 50%)",
+          willChange: "clip-path, transform",
+          transform: "translateZ(0)",
         }}
-        className="absolute rounded-[999px] mt-[-18rem] revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
+        className="absolute mt-[-18rem] revealVideo w-[100%] h-[100%] bg-[var(--color-black)]"
       >
         <video
           src="/videos/pin-video.mp4"

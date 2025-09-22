@@ -17,7 +17,7 @@ const FlavorTitle = () => {
       ease: "inOut",
       duration: 0.2,
       scrollTrigger: {
-        trigger: ".f-wrapper",
+        trigger: ".ft-wrapper",
         start: "top 40%",
         end: "top 39%",
         scrub: 1,
@@ -29,7 +29,7 @@ const FlavorTitle = () => {
       ease: "power1.inOut",
       opacity: 1,
       scrollTrigger: {
-        trigger: ".f-wrapper",
+        trigger: ".ft-wrapper",
         start: "top 20%",
         end: "top 19%",
         scrub: 1,
@@ -43,7 +43,7 @@ const FlavorTitle = () => {
       ease: "inOut",
       duration: 0.2,
       scrollTrigger: {
-        trigger: ".f-wrapper",
+        trigger: ".ft-wrapper",
         start: "top 5%",
         end: "top 4.5%",
         scrub: 1,
@@ -56,7 +56,7 @@ const FlavorTitle = () => {
       scrollTrigger: {
         trigger: ".ft-wrapper",
         start: "top 0%",
-        end: "top -80%",
+        end: "top -75%",
         scrub: true,
       },
     });
