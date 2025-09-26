@@ -14,32 +14,33 @@ const Hero = () => {
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".h-wrapper",
-        start: "top top",
+        start: "bottom 99%",
         scrub: 0.5,
-        end: "bottom top",
+        end: "bottom 0%",
       },
     });
-    tl2
-      .to(".h-wrapper", {
-        rotate: "10deg",
-        y: "42vh",
-        width: "82%",
-      })
-      .to(
-        ".hero-content .title",
-        {
-          fontSize: "6vw",
-          height: "15vh",
-        },
-        "<"
-      )
-      .to(
-        ".hero-content .des",
-        {
-          width: "27vw",
-        },
-        "<"
-      );
+    tl2.to(".h-wrapper", {
+      ease: "linear",
+      rotate: "10deg",
+      // y: "42vh",
+      y: "38vh",
+      width: "82%",
+    });
+    // .to(
+    //   ".hero-content .title",
+    //   {
+    //     fontSize: "6vw",
+    //     height: "15vh",
+    //   },
+    //   "<"
+    // );
+    // .to(
+    //   ".hero-content .des",
+    //   {
+    //     width: "27vw",
+    //   },
+    //   "<"
+    // );
   }, []);
 
   const tl = gsap.timeline({
@@ -84,7 +85,7 @@ const Hero = () => {
 
   return (
     <div className="pb-[-200px] bg-[#222123] overflow-hidden w-[100%] flex justify-center align-center">
-      <div className="h-wrapper bg-[var(--color-milk)] w-[100%] h-screen relative overflow-hidden">
+      <div className="[container-type:inline-size] h-wrapper bg-[var(--color-milk)] w-[100%] h-screen relative overflow-hidden">
         <video
           src="/videos/hero-bg.mp4"
           autoPlay
@@ -100,7 +101,7 @@ const Hero = () => {
           className="object-contain scale-[1.8] overflow-hidden max-[330px]:translate-y-[-25%] max-[400px]:translate-y-[-19.8%] max-[580px]:translate-y-[-15%] md:hidden"
         />
         <div className="hero-content w-[100%] md:w-[65%] lg:w-[55%] xl:w-[53%] flex flex-col items-center justify-center absolute top-[10.5%] md:top-[25%] xl:top-[18%] 2xl:top-[16%] md:left-[17%] lg:left-[23.4%]">
-          <div className="h-[auto]">
+          {/* <div className="h-[auto]">
             <h1
               className="title ht flex justify-center items-center"
               ref={ftRef}
@@ -108,6 +109,7 @@ const Hero = () => {
               Freaking Delicious
             </h1>
           </div>
+
           <div
             style={{
               clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
@@ -118,8 +120,29 @@ const Hero = () => {
             <h1 className="title flex justify-center items-center text-[#fce1cd] sm:pb-[1.2rem] 2xl:pb-[1rem] px-[0.3rem] sm:px-[1rem] 2xl:px-[0rem] w-[100%] text-center">
               Protein + Caffeine
             </h1>
+          </div> */}
+          <h1
+            ref={ftRef}
+            className="ht text-[14cqw] md:text-[8cqw] leading-[16cqw] md:leading-[9cqw] uppercase font-extrabold tracking-tighter flex justify-center items-center"
+          >
+            Freaking Delicious
+          </h1>
+          <div
+            ref={stRef}
+            style={{
+              clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
+            }}
+            className="bg-[var(--color-yellow-brown)] mt-[3vw] md:mt-[0rem] px-[1vw] pb-[1vw] backface-hidden border-[3px] md:border-[7.5px] border-solid border-[#faeade] rotate-357"
+          >
+            <h1 className="ht text-[#fce1cd] w-[100%] h-[100%] text-center text-[14cqw] md:text-[8cqw] leading-[16cqw] md:leading-[9cqw] uppercase font-extrabold tracking-tighter">
+              Protein + Caffeine
+            </h1>
           </div>
-          <p className="des text-center m-[1.5rem_0rem_2.5rem_0rem] sm:m-[1.2rem_0rem_2.5rem_0rem] md:m-[1.6rem_0rem_2.1rem_0rem] lg:m-[1.8rem_0rem_2.3rem_0rem] xl:m-[2rem_0rem_2.5rem_0rem] 2xl:m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[76%] md:w-[52%]">
+          {/* <p className="des text-center m-[1.5rem_0rem_2.5rem_0rem] sm:m-[1.2rem_0rem_2.5rem_0rem] md:m-[1.6rem_0rem_2.1rem_0rem] lg:m-[1.8rem_0rem_2.3rem_0rem] xl:m-[2rem_0rem_2.5rem_0rem] 2xl:m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[76%] md:w-[52%]">
+            Live life to the fullest with SPYLT: Shatter boredom and embrace
+            your inner kid with every deliciously smooth chug.
+          </p> */}
+          <p className="text-[4.4cqw] min-[384px]:text-[3.5cqw] min-[481px]:text-[2.6cqw] sm:text-[2.2cqw] md:text-[1.4cqw] lg:text-[1.05cqw] leading-[1.2rem] font-proxima text-center m-[1.5rem_0rem_2.5rem_0rem] sm:m-[1.2rem_0rem_2.5rem_0rem] md:m-[1.6rem_0rem_2.1rem_0rem] lg:m-[1.8rem_0rem_2.3rem_0rem] xl:m-[2rem_0rem_2.5rem_0rem] 2xl:m-[2.7rem_0rem_3.5rem_0rem] w-[80%] sm:w-[76%] md:w-[52%]">
             Live life to the fullest with SPYLT: Shatter boredom and embrace
             your inner kid with every deliciously smooth chug.
           </p>

@@ -52,12 +52,12 @@ body {
 }
 
 .title-primary {
-  @apply sm:text-[8.2rem] md:text-[9.9rem] lg:text-[13.1rem] xl:text-[16.4rem] 2xl:text-[19.7rem];
+  @apply sm:text-[8.2rem] md:text-[9.9rem] lg:text-[13.1rem] xl:text-[16.4rem] 2xl:text-[19.7rem] 2xl:leading-[20rem] uppercase font-bold absolute;
 }
 
-/* .title-secondary {
-  @apply;
-} */
+.title-secondary {
+  @apply text-[13vw] sm:text-[83px] md:text-[70px] lg:text-[80px] xl:text-[100px] 2xl:text-[119px] tracking-tight md:tracking-tighter max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
+}
 
 /* .title-tertiary {
   @apply;

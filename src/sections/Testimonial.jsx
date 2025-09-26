@@ -82,13 +82,13 @@ const Testimonial = () => {
   });
   return (
     <section className="mt-[-100vh] testimonial-section relative z-[2] w-[100%] h-[100vh] bg-[var(--color-milk)]">
-      <h1 className="th-1 left-1/2 translate-x-[-50%] top-[10%] text-[var(--color-black)] absolute font-bold text-[20rem] uppercase leading-[20rem]">
+      <h1 className="th-1 title-primary left-1/2 translate-x-[-50%] top-[10%] text-[var(--color-black)]">
         What's
       </h1>
-      <h1 className="th-2 left-1/2 translate-x-[-50%] bottom-[1%] text-[var(--color-light-brown)] absolute font-bold text-[20rem] uppercase leading-[20rem]">
+      <h1 className="th-2 title-primary left-1/2 translate-x-[-50%] bottom-[1%] text-[var(--color-light-brown)]">
         Everyone
       </h1>
-      <h1 className="th-3 bottom-[1%] left-[-22%] text-[var(--color-black)] absolute font-bold text-[20rem] uppercase leading-[20rem]">
+      <h1 className="th-3 title-primary bottom-[1%] left-[-22%] text-[var(--color-black)]">
         Talking
       </h1>
       <div className="flex w-[90%] h-[640px] left-1/2 translate-x-[-50%] absolute bottom-[10%]">
