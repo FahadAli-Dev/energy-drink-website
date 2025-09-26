@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  f;
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
   useEffect(() => {
