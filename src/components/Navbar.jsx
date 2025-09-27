@@ -207,7 +207,7 @@ const Navbar = () => {
           <div className="dash dash-2 md:w-[29px] lg:w-[30px] xl:w-[38px] 2xl:w-[46px] border-[1.5px] border-t-[2px] border-solid border-[var(--color-dark-brown)]"></div>
         </div>
 
-        <button className="text-[1rem] md:text-[9.92px] lg:text-[11.36px] xl:text-[13.36px] 2xl:text-[15.36px] p-[0.8rem_1rem] md:p-[9px_18.8px] lg:p-[10px_20px] xl:p-[10px_24.32px] 2xl:p-[0.8rem_1.9rem] font-[800] rounded-[999px] uppercase bg-[#fef3f0] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
+        <button className="text-[1rem] md:text-[9.92px] lg:text-[11.36px] xl:text-[13.36px] 2xl:text-[15.36px] p-[0.7rem_1rem] md:p-[9px_18.8px] lg:p-[10px_20px] xl:p-[10px_24.32px] 2xl:p-[0.8rem_1.9rem] font-[800] rounded-[999px] uppercase bg-[#fef3f0] transition-all ease-[cubic-bezier(.455, .03, .515, .955)] duration-[0.3s] hover:bg-[var(--color-light-brown)] cursor-pointer border-none">
           Find in Stores
         </button>
       </nav>

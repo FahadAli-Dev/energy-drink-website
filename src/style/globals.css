@@ -56,7 +56,7 @@ body {
 }
 
 .title-secondary {
-  @apply text-[13vw] sm:text-[83px] md:text-[70px] lg:text-[80px] xl:text-[100px] 2xl:text-[119px] tracking-tight md:tracking-tighter max-[401px]:h-[8vh] max-[535px]:h-[9vh] h-[11vh] sm:h-[95px] md:h-[90px] lg:h-[95px] xl:h-[140px] 2xl:h-auto font-extrabold leading-[138px] uppercase;
+  @apply text-[14cqw] md:text-[8cqw] leading-[16cqw] md:leading-[9cqw] uppercase font-bold tracking-tight md:tracking-tighter;
 }
 
 /* .title-tertiary {
